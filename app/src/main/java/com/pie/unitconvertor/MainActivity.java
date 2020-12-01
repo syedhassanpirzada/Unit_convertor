@@ -1,4 +1,4 @@
-package com.example.unitconvertor;
+package com.boss.unitconvertor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-}
-private void func ()
-{
 
-};
+    private void func ()
+    {
+
+    };
+}
