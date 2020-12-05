@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Person from './Component/Person';
 
 class App extends Component {
+  state = {
+    persons: [
+      { name:'Max', age:24},
+      {name: 'Many',age:25},
+      {name: 'pies',age:25}
+    ]
+  }
+  switchNameHandler = () => {
+    console.log('was clicked');
+    this.setState({persons:[0].name='pie'});
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>I am a app</h1>
+        <button onClick={this.switchNameHandler}>Switch names</button>
+        <Person name={this.state.persons[0].name} age ={this.state.persons[0].age}/>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>testing childern</Person>
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/> 
       </div>
     );
+    
   }
 }
 
